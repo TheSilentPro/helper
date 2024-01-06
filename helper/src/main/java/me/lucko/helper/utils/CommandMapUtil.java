@@ -82,7 +82,7 @@ public final class CommandMapUtil {
         KNOWN_COMMANDS_FIELD = knownCommandsField;
     }
 
-    private static CommandMap getCommandMap() {
+    public static CommandMap getCommandMap() {
         try {
             return (CommandMap) COMMAND_MAP_FIELD.get(Bukkit.getServer().getPluginManager());
         } catch (Exception e) {
@@ -90,7 +90,7 @@ public final class CommandMapUtil {
         }
     }
 
-    private static Map<String, Command> getKnownCommandMap() {
+    public static Map<String, Command> getKnownCommandMap() {
         try {
             //noinspection unchecked
             return (Map<String, Command>) KNOWN_COMMANDS_FIELD.get(getCommandMap());
